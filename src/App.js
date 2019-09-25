@@ -7,13 +7,13 @@ import Total from './components/Total';
 
 import { connect } from 'react-redux';
 
-const App = () => {
+const App = props => {
   const removeFeature = item => {
     // dispatch an action here to remove an item
   };
 
   const buyItem = item => {
-    // dipsatch an action here to add an item
+    // dispatch an action here to add an item
   };
 
   return (
@@ -30,7 +30,7 @@ const App = () => {
   );
 };
 
-mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
     car: state.car,
     store: state.store,

@@ -1,15 +1,7 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import AdditionalFeature from './AdditionalFeature';
 
-// import { reducer, initialState } from '../reducers';
-
 const AdditionalFeatures = props => {
-  // const [state, dispatch] = useReducer(reducer, initialState);
-
-  // const add = value => {
-  //   return dispatch({ type: "ADD_FEATURE", payload: value});
-  //   };
-
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -19,7 +11,7 @@ const AdditionalFeatures = props => {
             <AdditionalFeature
               key={item.id}
               feature={item}
-              //add={() => {add(feature)}}
+              add={props.addFeature}
             />
           ))}
         </ol>
